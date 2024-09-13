@@ -7,7 +7,7 @@ conn = sqlite3.connect('example.db')
 c = conn.cursor()
 
 # Crear una tabla
-c.execute('''CREATE TABLE IF NOT EXISTS users
+c.execute('''CREATE TABLE IF NOT EXISTS userss
              (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)''')
 
 # Insertar datos en la tabla
