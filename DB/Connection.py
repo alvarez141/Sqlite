@@ -42,7 +42,12 @@ def InserData(connection, cursor,data):
     connection.close()
 
 def query_data(connection, cursor):
-    ...
+    setence = "SELECT id,user, email FROM users"
+    result = cursor.execute(setence)
+    # print(result.fetchall())
+    # connection.close()
+    return result
+
 
 
 if __name__ == '__main__':
