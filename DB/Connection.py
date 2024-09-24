@@ -13,6 +13,8 @@ def create_table(connection, cursor):
             email TEXT NULL
         )
     ''')
+    #cursor.execute ("ALTER TABLE users ADD COLUMN password TEXT NULL")
+    #cursor.execute("ALTER TABLE users DROP COLUMN password")
     connection.commit()
     connection.close()
 
