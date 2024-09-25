@@ -17,6 +17,12 @@ def create_table(connection, cursor):
     #cursor.execute("ALTER TABLE users DROP COLUMN password")
     connection.commit()
     connection.close()
+def add_data(connection, cursos, dates):
+    sentence = "INSERT INTO users VALUES(? , ? , ?)"
+    cursos.executemany(sentence, dates)
+
+    connection.commit()
+    connection.close()
 
 if __name__ == '__main__':
     Connection()
