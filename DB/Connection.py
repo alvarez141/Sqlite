@@ -24,5 +24,10 @@ def add_data(connection, cursos, dates):
     connection.commit()
     connection.close()
 
+def QueryData(connection, cursor, id = None):
+    sentence = f"SELECT id, name FROM users WHERE id  = {id}"
+    result = cursor.execute(sentence)
+    return result
+
 if __name__ == '__main__':
     Connection()
