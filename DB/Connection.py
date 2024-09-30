@@ -34,6 +34,10 @@ def UpdateData(connection, cursor, id, name):
     cursor.execute(sentence)
     connection.commit()
     
+def DeleteData(connection, cursor, id):
+    sentence = f"DELETE FROM users WHERE id = {id}"
+    cursor.execute(sentence)
+    connection.commit()
 
 if __name__ == '__main__':
     Connection()

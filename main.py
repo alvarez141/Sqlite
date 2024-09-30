@@ -1,5 +1,5 @@
 import sqlite3
-from DB.Connection import Connection, create_table, add_data, QueryData, UpdateData
+from DB.Connection import Connection, create_table, add_data, QueryData, UpdateData, DeleteData
 
 con , cursor = Connection()
 # create_table(con, cursor)
@@ -10,7 +10,9 @@ for row in users:
     print(row)
 
 
-UpdateData(con, cursor, 7, 'Jose Luis Ramirez')
+UpdateData(con, cursor, 7, 'Jose Luis borrado')
 updated_users = QueryData(con, cursor, 7)
 for row in updated_users:
     print(row)
+
+deletedata = DeleteData(con, cursor, 7)
