@@ -29,5 +29,11 @@ def QueryData(connection, cursor, id = None):
     result = cursor.execute(sentence)
     return result
 
+def UpdateData(connection, cursor, id, name):
+    sentence = f"UPDATE users SET name = '{name}' WHERE id = {id}"
+    cursor.execute(sentence)
+    connection.commit()
+    
+
 if __name__ == '__main__':
     Connection()
